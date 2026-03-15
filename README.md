@@ -32,3 +32,10 @@ pip install -r requirements.txt
 
 # Start training
 python train.py
+
+
+## 🗺️ Roadmap (Future of Sensora Labs)
+The foundation is complete (v1.0.0). Next stages include:
+- [ ] **Sensora-Vision**: Expanding the engine to support CNNs for image recognition.
+- [ ] **Speed Optimization**: Porting critical kernels to C++ or CUDA for performance.
+- [ ] **Web Integration**: Building a Flask/React frontend for real-time model interaction.
