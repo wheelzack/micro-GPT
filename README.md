@@ -12,3 +12,10 @@ This is a dependency-free, atomic implementation of a GPT transformer. Inspired 
 git clone [https://github.com/wheelzack/micro-GPT.git](https://github.com/wheelzack/micro-GPT.git)
 pip install -r requirements.txt
 python train.py
+
+
+## 🧪 Proof of Concept (Inference)
+After training for 5000 iterations on our custom dataset, the model can generate text based on the "Sensora" seed.
+
+**Input:** `sens`
+**Output:** `sensora labs is ai`
