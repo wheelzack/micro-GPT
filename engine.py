@@ -3,7 +3,8 @@ import numpy as np
 class Tensor:
     """ A mini-tensor with autograd, optimized for Sensora Labs GPT """
     def __init__(self, data, _children=(), _op=''):
-        self.data = np.array(data)
+        # Force data into at least 2D to keep matmul logic consistent
+        self.data = np.atleast_2d(data) 
         self.grad = np.zeros_like(self.data)
         self._backward = lambda: None
         self._prev = set(_children)
@@ -19,8 +20,10 @@ class Tensor:
         return out
 
     def __matmul__(self, other):
+        other = other if isinstance(other, Tensor) else Tensor(other)
         out = Tensor(self.data @ other.data, (self, other), '@')
         def _backward():
+            # Standard matrix gradient: dL/dA = dL/dC * B^T and dL/dB = A^T * dL/dC
             self.grad += out.grad @ other.data.T
             other.grad += self.data.T @ out.grad
         out._backward = _backward
