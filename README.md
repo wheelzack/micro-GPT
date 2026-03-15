@@ -19,3 +19,10 @@ After training for 5000 iterations on our custom dataset, the model can generate
 
 **Input:** `sens`
 **Output:** `sensora labs is ai`
+
+# 🔬 Sensora GPT-Atomic
+![Build Status](https://github.com/wheelzack/micro-GPT/actions/workflows/tests.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+
+**The most atomic, dependency-free Transformer implementation in Python.**
