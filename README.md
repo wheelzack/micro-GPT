@@ -1,20 +1,14 @@
-# 🔬 Sensora GPT-Atomic
-**The most atomic, dependency-free Transformer implementation in Python.**
+# 🚀 Micro-GPT (Sensora Labs Edition)
 
-Developed by **Sensora Labs**, this repository contains a complete GPT-style architecture built from the ground up. We avoided heavy frameworks like PyTorch to demonstrate the raw mathematical beauty of Autograd and Self-Attention.
+This is a dependency-free, atomic implementation of a GPT transformer. Inspired by Andrej Karpathy's work, we've optimized this version for clarity and educational research at **Sensora Labs**.
 
-## 🚀 Key Features
-- **Tensor-based Autograd**: A custom engine handling Matrix Multiplications ($A \times B$) and Backpropagation.
-- **Karpathy-Inspired**: Optimized for clarity and "first-principles" understanding.
-- **Pure NumPy**: Leveraging vectorized operations for 50x speed gains over scalar-based models.
+## 🧠 What's Inside?
+- **Pure Python Autograd**: No PyTorch. No TensorFlow. Just math.
+- **Character-level Training**: Trained to predict the next token in the "Sensora Labs" sequence.
+- **Self-Attention**: Implementation of Multi-head attention from scratch.
 
-## 🛠 Setup & Usage
-1. Clone the repo: `git clone https://github.com/YourUser/sensora-gpt-atomic`
-2. Install requirements: `pip install numpy`
-3. Train the model: `python train.py`
-
-## 🧠 Theory
-The model uses a standard Transformer block consisting of:
-1. **LayerNorm** for stability.
-2. **Multi-Head Attention** for context awareness.
-3. **GELU/ReLU** non-linearity.
+## 🛠️ Setup
+```bash
+git clone [https://github.com/wheelzack/micro-GPT.git](https://github.com/wheelzack/micro-GPT.git)
+pip install -r requirements.txt
+python train.py
