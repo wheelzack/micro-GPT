@@ -36,3 +36,13 @@ for epoch in range(1000):
         print(f"Epoch {epoch}: Training on '{chunk.strip()}'")
 
 print("\n--- Training Complete! ---")
+
+# Add these imports at top
+from tokenizer import BPETokenizer  # or CharTokenizer
+from utils import save_checkpoint
+
+# ============ TRAINING LOOP के बाद ============
+
+# Save final checkpoint
+save_checkpoint(model, tokenizer, "checkpoints/final_model.pkl")
+print("Training complete! Use: python chat.py --checkpoint checkpoints/final_model.pkl")
